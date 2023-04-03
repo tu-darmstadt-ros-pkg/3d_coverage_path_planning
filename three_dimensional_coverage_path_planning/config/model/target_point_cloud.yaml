@@ -1,0 +1,7 @@
+num_sample_points: 500000
+
+# use voxel filter with greater leaf size here
+voxel_filter_leaf_size: 0.1
+
+write_normals: false
+write_colors: false

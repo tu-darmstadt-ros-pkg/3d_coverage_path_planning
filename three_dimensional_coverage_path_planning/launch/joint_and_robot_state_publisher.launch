@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="robot_description" default=""/>
+  <arg name="zeros" default=""/>
+
+  <!-- if joint state publisher should be started with gui (if true and rviz_config_file is set, rviz is also started) -->
+  <arg name="gui" default="false"/>
+  <arg name="rviz_config_file" default=""/>
+
+
+  <param name="robot_description" command="$(arg robot_description)"/>
+
+  <!-- joint state publisher (with/without gui) -->
+  <node if="$(arg gui)" name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui">
+    <rosparam param="zeros" subst_value="True">
+      $(arg zeros)
+    </rosparam>
+  </node>
+
+  <node unless="$(arg gui)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <rosparam param="zeros" subst_value="True">
+      $(arg zeros)
+    </rosparam>
+  </node>
+
+
+  <!-- robot state publisher -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+
+  <!-- rviz (only if rviz_config_file is set and gui is true) -->
+  <node if="$(eval false if (rviz_config_file == '') else gui)" name="rviz_robot_description" pkg="rviz" type="rviz"
+        args="-d $(arg rviz_config_file)"/>
+
+
+</launch>

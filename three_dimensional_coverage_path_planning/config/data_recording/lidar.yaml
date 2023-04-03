@@ -1,0 +1,18 @@
+
+data_topics:
+  - name: scan_matched_points2_cloud
+    topic: /scan_matched_points2
+
+recording_time_s: 4.0
+
+
+
+# true: use color from incoming point cloud
+# false: set one color per executed waypoint
+keep_original_color: false
+
+# publish accumulated point cloud each time a new one is added (i.e. at each viewpoint for each new scan)
+publish_intermediate_results: false
+
+# save point cloud at the end of each waypoint
+save_intermediate_results: true

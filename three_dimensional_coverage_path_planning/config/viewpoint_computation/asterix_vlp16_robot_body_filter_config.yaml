@@ -1,0 +1,61 @@
+## in most parts taken from asterix_onboard_launch / lidar config, slightly adapted (use fixed frame and set frames/sensor and output)
+# https://git.sim.informatik.tu-darmstadt.de/hector/asterix_launch/-/blob/master/asterix_onboard_launch/config/lidar_proc/vlp16_robot_body_filter_config.yaml
+
+cloud_filter_chain:
+  - name: robot_body_filter_containment
+    type: robot_body_filter/RobotBodyFilterPointCloud2
+    params:
+      transforms/timeout/unreachable: 1.0
+      transforms/timeout/reachable: 1.0
+      transforms/require_all_reachable: false
+      debug/pcl/clip: true
+      debug/pcl/shadow: true
+      debug/pcl/inside: true
+      sensor/point_by_point: false # true would be better, but we lack per point viewpoint coordinates
+      sensor/min_distance: 0.15
+      sensor/max_distance: 0
+      frames/sensor: spin_lidar_mount_link_fixed  # here not filled from header
+      frames/filtering: spin_lidar_mount_link_fixed
+      frames/output: spin_lidar_mount_link_fixed # same as filter frame
+      frames/fixed: spin_lidar_mount_link_fixed # not used if point_by_point is false
+      body_model/inflation/scale: 1.0
+      body_model/inflation/padding: 0.0
+      body_model/inflation/contains_test/scale: 1.0
+      body_model/inflation/contains_test/padding: 0.03
+      body_model/inflation/shadow_test/scale: 1.0
+      body_model/inflation/shadow_test/padding: 0.01
+      body_model/robot_description_param: /robot_description
+      #body_model/inflation/per_link/padding: {gripper_link_r2: 0.04, gripper_link_l2: 0.04, gripper_link_r1: 0.04, gripper_link_l1: 0.04}
+      filter/do_clipping: true
+      filter/do_contains_test: true
+      filter/do_shadow_test: true
+      filter/max_shadow_distance: 3
+      only_links:
+        - arm_link_0
+        - arm_link_1
+        - arm_link_2
+        - arm_link_3
+        - arm_link_4
+        - arm_link_5
+        - arm_end_link
+        - gripper_base
+        - gripper_link_l1
+        - gripper_link_l2
+        - gripper_link_r1
+        - gripper_link_r2
+        - gripper_rgbd_cam_link
+        - gripper_cam_link
+        - gripper_sensor_module_mount_link
+        - gripper_thermal_cam_frame
+        - chassis_link
+        - main_track_left_link
+        - main_track_right_link
+        - flipper_back_left_link
+        - flipper_back_right_link
+        - flipper_front_left_link
+        - flipper_front_right_link
+        - autonomy_box_link
+        - sensor_head_yaw_link
+        - sensor_head_pitch_link
+        - sensor_head_rgbd_cam_link
+        - sensor_head_thermal_cam_frame

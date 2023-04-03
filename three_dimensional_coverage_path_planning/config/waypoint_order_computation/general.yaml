@@ -1,0 +1,19 @@
+cost_computer_plugin: hector_waypoint_order::PathCostComputer
+
+path_planner_plugin: three_dimensional_coverage_path_planning::MeshNavigationPathPlanner
+
+#waypoint_order_computer_plugin: hector_waypoint_order::MstTspSolver
+#waypoint_order_computer_plugin: hector_waypoint_order::SimulatedAnnealingTspSolver
+waypoint_order_computer_plugin: hector_waypoint_order::MstAndSimulatedAnnealingTspSolver
+
+publish_path: false
+
+# only used by simulated annealing:
+# whether all mutators generate a neighbor and the best is chosen
+# or
+# whether one mutator is selected probabilistically to generate the neighbor
+use_best_mutator: true
+
+# only used by simulated annealing:
+initial_temperature: 5
+cooling_rate: 0.99

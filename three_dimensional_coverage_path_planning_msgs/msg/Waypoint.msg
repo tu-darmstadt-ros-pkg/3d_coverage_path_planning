@@ -1,0 +1,5 @@
+geometry_msgs/PoseStamped waypoint
+
+three_dimensional_coverage_path_planning_msgs/Viewpoint viewpoint
+
+nav_msgs/Path path_to_waypoint

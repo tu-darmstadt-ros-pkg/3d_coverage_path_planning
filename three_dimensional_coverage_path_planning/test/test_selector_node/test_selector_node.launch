@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+
+
+<node name="test_selector_node" pkg="three_dimensional_coverage_path_planning" type="test_selector_node" respawn="false"
+      output="screen">
+</node>
+
+</launch>

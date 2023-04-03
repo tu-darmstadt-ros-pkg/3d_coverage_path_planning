@@ -1,0 +1,17 @@
+### Control flow
+
+# load precomputed models (mesh, point cloud, octomap, esdf) or compute them from mesh
+load_models: false
+
+# whether the models shall be stored in files in order to load them later
+save_models: true
+
+# load a precomputed path (e.g. from the last run) or compute it
+load_path: false
+
+# whether the path shall be stored in order to be loaded later
+save_path: true
+
+# if path shall be executed or only the precomputations shall be done
+execute_path: true
+

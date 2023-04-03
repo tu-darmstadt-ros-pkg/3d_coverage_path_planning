@@ -1,0 +1,15 @@
+
+
+### Plugins
+visibility_checker_plugins:
+  - three_dimensional_coverage_path_planning::SdfChecker
+  - three_dimensional_coverage_path_planning::OctomapChecker
+
+viewpoint_selector_plugin: three_dimensional_coverage_path_planning::GreedySelector
+
+
+
+### Visualizations
+# visibility checks can only be published if OpenMP is not used (CMake option)
+publish_visibility_checks: false
+visibility_lines: false # false: lines, true: points

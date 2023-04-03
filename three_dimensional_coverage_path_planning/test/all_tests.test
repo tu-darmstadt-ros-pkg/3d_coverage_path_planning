@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!-- launch the nodes that provide the mesh conversion services -->
+  <include file="$(find mesh_conversions)/launch/convert_mesh.launch"/>
+
+  <arg name="all_tests" value="true"/>
+
+  <include file="$(find three_dimensional_coverage_path_planning)/test/test_model_data.test" pass_all_args="true"/>
+  <include file="$(find three_dimensional_coverage_path_planning)/test/test_viewpoint_selector.test" pass_all_args="true"/>
+</launch>

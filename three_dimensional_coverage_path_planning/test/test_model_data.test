@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<launch>
+  <test test-name="test_model_data" pkg="three_dimensional_coverage_path_planning" type="test_model_data"
+        time-limit="720">
+
+    <!-- Test config files -->
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/test/test_config/general.yaml"/>
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/test/test_config/model/general.yaml" ns="model"/>
+
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/test/test_config/model/mesh.yaml"
+              ns="model/complete/mesh"/>
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/test/test_config/model/sdf.yaml"
+              ns="model/complete/sdf"/>
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/test/test_config/model/octomap.yaml"
+              ns="model/complete/octomap"/>
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/test/test_config/model/point_cloud.yaml"
+              ns="model/complete/point_cloud"/>
+
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/test/test_config/model/mesh.yaml"
+              ns="model/target/mesh"/>
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/test/test_config/model/target_point_cloud.yaml"
+              ns="model/target/point_cloud"/>
+
+    <rosparam
+        file="$(find three_dimensional_coverage_path_planning)/test/test_config/viewpoint_computation/general.yaml"
+        ns="viewpoint_computation"/>
+  </test>
+
+
+  <!-- launch the nodes that provide the mesh conversion services -->
+  <arg name="all_tests" default="false"/>
+  <include file="$(find mesh_conversions)/launch/convert_mesh.launch" unless="$(arg all_tests)"/>
+</launch>

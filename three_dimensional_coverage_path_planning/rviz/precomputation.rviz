@@ -1,0 +1,669 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Complete model1
+        - /Complete model1/MeshMap1/Display Type1
+        - /Complete model1/MeshMap1/Display Type1/Use Custom limits1
+        - /Viewpoints1
+        - /Path1
+      Splitter Ratio: 0.7616279125213623
+    Tree Height: 719
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 1
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 8
+        Y: 8
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 18
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz/Group
+      Displays:
+        - Class: octomap_rviz_plugin/OccupancyGrid
+          Enabled: false
+          Max. Height Display: 3.4028234663852886e+38
+          Max. Octree Depth: 16
+          Min. Height Display: -3.4028234663852886e+38
+          Name: OccupancyGrid
+          Octomap Topic: /three_dimensional_coverage_path_planning/model/complete/octomap
+          Queue Size: 5
+          Value: false
+          Voxel Alpha: 1
+          Voxel Coloring: Z-Axis
+          Voxel Rendering: Occupied Voxels
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: PointCloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.009999999776482582
+          Style: Flat Squares
+          Topic: /three_dimensional_coverage_path_planning/model/complete/point_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: SDF
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.03750000149011612
+          Style: Boxes
+          Topic: /three_dimensional_coverage_path_planning/model/complete/sdf_pointcloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: SDF slice
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.03750000149011612
+          Style: Boxes
+          Topic: /three_dimensional_coverage_path_planning/model/complete/sdf_slice
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Buffer Size: 1
+          Class: rviz_map_plugin/Mesh
+          Display Type:
+            Color Scale: Rainbow
+            Faces Alpha: 1
+            Faces Color: 0; 255; 0
+            Material Service Name: get_materials
+            Show textured faces only: false
+            Texture Service Name: get_texture
+            Use Custom limits:
+              Value: true
+              Vertex Costs Lower Limit: 0
+              Vertex Costs Upper Limit: 0.5
+            Value: Vertex Costs
+            Vertex Color Service Name: get_vertex_colors
+            Vertex Colors Topic: ""
+            Vertex Costs Topic: /three_dimensional_coverage_path_planning/mesh_map/vertex_costs
+            Vertex Costs Type: Combined Costs
+          Enabled: true
+          Geometry Topic: /three_dimensional_coverage_path_planning/mesh_map/mesh
+          Name: MeshMap
+          Show Normals:
+            Normals Alpha: 1
+            Normals Color: 255; 0; 255
+            Normals Scaling Factor: 0.10000000149011612
+            Value: false
+          Show Wireframe:
+            Value: true
+            Wireframe Alpha: 0.5
+            Wireframe Color: 0; 0; 0
+          Value: true
+        - Class: rviz/Marker
+          Enabled: false
+          Marker Topic: /three_dimensional_coverage_path_planning/mesh_map/vector_field
+          Name: MeshMap Vectorfield
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: false
+      Enabled: false
+      Name: Complete model
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: PointCloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.009999999776482582
+          Style: Flat Squares
+          Topic: /three_dimensional_coverage_path_planning/model/target/point_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+      Enabled: true
+      Name: Target model
+    - Class: rviz/Group
+      Displays: ~
+      Enabled: false
+      Name: Target set
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/octomap_check_passed
+              Name: Octomap check passed
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: true
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/octomap_raycast_blocked
+              Name: Octomap raycast blocked
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: true
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/octomap_check
+              Name: Octomap raycast failed
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: true
+            - Class: rviz/Marker
+              Enabled: false
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/sdf_gradient_check_passed
+              Name: SDF gradient check passed
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: false
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/sdf_end_gradient
+              Name: SDF end gradient
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: true
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/sdf_start_gradient
+              Name: SDF start gradient
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: true
+            - Class: rviz/Marker
+              Enabled: false
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/sdf_end_distance_smaller
+              Name: SDF end distance
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: false
+            - Class: rviz/Marker
+              Enabled: false
+              Marker Topic: //three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/sdf_start_distance_smaller
+              Name: SDF start distance
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: false
+            - Class: rviz/Marker
+              Enabled: false
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/self_filter_check_passed
+              Name: Self filter check passed
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: false
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/self_filter_blocked
+              Name: Self filter blocked
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: true
+            - Alpha: 1
+              Autocompute Intensity Bounds: false
+              Autocompute Value Bounds:
+                Max Value: 0.9998999834060669
+                Min Value: -0.9998999834060669
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: Intensity
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 25; 255; 0
+              Max Intensity: 1
+              Min Color: 255; 25; 0
+              Min Intensity: 0
+              Name: Self filter mask (only for debug purposes)
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.009999999776482582
+              Style: Flat Squares
+              Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/self_filter_mask
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: false
+              Value: false
+            - Class: rviz/Marker
+              Enabled: false
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/sensor_check_passed
+              Name: Sensor check passed
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: false
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/sensor_out_of_max_range
+              Name: Sensor out of max range
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: true
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/sensor_out_of_min_range
+              Name: Sensor out of min range
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: true
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/sensor_out_of_horiz_fov
+              Name: Sensor out of horizontal FOV
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: true
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker/sensor_out_of_vert_fov
+              Name: Sensor out of vertical FOV
+              Namespaces:
+                {}
+              Queue Size: 10
+              Value: true
+          Enabled: false
+          Name: Visibility checks
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/rated_candidates
+          Name: Rated candidates
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: Rated candidates
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.05000000074505806
+          Style: Spheres
+          Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/all_candidates
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/selected_candidates
+          Name: Selected candidates
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: true
+        - Class: rviz/Marker
+          Enabled: false
+          Marker Topic: /three_dimensional_coverage_path_planning/viewpoint_computation/uncovered_target_points
+          Name: Uncovered target points
+          Namespaces:
+            {}
+          Queue Size: 10
+          Value: false
+      Enabled: true
+      Name: Viewpoints
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 1
+              Buffer Length: 100
+              Class: rviz/Path
+              Color: 26; 135; 255
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.30000001192092896
+              Line Style: Lines
+              Line Width: 0.029999999329447746
+              Name: Paths between waypoints
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Queue Size: 10
+              Radius: 0.029999999329447746
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic: /three_dimensional_coverage_path_planning/waypoint_order_computation/paths_between_candidates
+              Unreliable: false
+              Value: true
+            - Alpha: 1
+              Buffer Length: 100
+              Class: rviz/Path
+              Color: 245; 121; 0
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.30000001192092896
+              Line Style: Lines
+              Line Width: 0.029999999329447746
+              Name: Paths nan
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Queue Size: 10
+              Radius: 0.029999999329447746
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic: /three_dimensional_coverage_path_planning/waypoint_order_computation/paths_nan
+              Unreliable: false
+              Value: true
+            - Alpha: 1
+              Buffer Length: 100
+              Class: rviz/Path
+              Color: 204; 0; 0
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.30000001192092896
+              Line Style: Lines
+              Line Width: 0.029999999329447746
+              Name: Path failed
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Queue Size: 100
+              Radius: 0.029999999329447746
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic: /three_dimensional_coverage_path_planning/waypoint_order_computation/paths_failed
+              Unreliable: false
+              Value: true
+          Enabled: false
+          Name: Paths between waypoints
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 25; 255; 0
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.05000000074505806
+          Name: Path (TSP)
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Queue Size: 10
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /three_dimensional_coverage_path_planning/waypoint_order_computation/tsp_path
+          Unreliable: false
+          Value: true
+        - Alpha: 0.10000000149011612
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 245; 121; 0
+          Enabled: false
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.05000000074505806
+          Name: Path (WaypointOrderComputer)
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Queue Size: 10
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /three_dimensional_coverage_path_planning/waypoint_order_computation/waypoint_order_computer_path
+          Unreliable: false
+          Value: false
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 237; 212; 0
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.05000000074505806
+          Name: Path (Simulated Annealing)
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Queue Size: 1
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /three_dimensional_coverage_path_planning/waypoint_order_computation/simulated_annealing_current_path
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: Path
+    - Alpha: 1
+      Class: rviz/Axes
+      Enabled: true
+      Length: 1
+      Name: Axes
+      Radius: 0.10000000149011612
+      Reference Frame: world
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 13.079872131347656
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Field of View: 0.7853981852531433
+      Focal Point:
+        X: 6.082913398742676
+        Y: 7.635062217712402
+        Z: 4.560317039489746
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 1.5697963237762451
+      Target Frame: <Fixed Frame>
+      Yaw: 6.2816162109375
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1016
+  Hide Left Dock: false
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd0000000400000000000001c40000035afc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d0000035a000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f00000357fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d00000357000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007800000003efc0100000002fb0000000800540069006d0065010000000000000780000002eb00fffffffb0000000800540069006d00650100000000000004500000000000000000000005b60000035a00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: true
+  Width: 1920
+  X: 2560
+  Y: 686

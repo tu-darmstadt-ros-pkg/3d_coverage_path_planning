@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<launch>
+  <test test-name="test_viewpoint_selector" pkg="three_dimensional_coverage_path_planning"
+        type="test_viewpoint_selector"/>
+</launch>

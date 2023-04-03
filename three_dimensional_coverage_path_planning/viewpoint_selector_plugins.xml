@@ -1,0 +1,23 @@
+<library path="lib/libthree_dimensional_coverage_path_planning">
+  <class type="three_dimensional_coverage_path_planning::GreedySelector"
+         base_class_type="three_dimensional_coverage_path_planning::ViewpointSelectorBase">
+    <description>Select viewpoints using a greedy approach.</description>
+  </class>
+  <class type="three_dimensional_coverage_path_planning::GreedyWithoutRedundanciesSelector"
+         base_class_type="three_dimensional_coverage_path_planning::ViewpointSelectorBase">
+    <description>Select viewpoints using a greedy approach with a backtracking step to remove redundancies.
+    </description>
+  </class>
+  <class type="three_dimensional_coverage_path_planning::ProbabilisticSelector"
+         base_class_type="three_dimensional_coverage_path_planning::ViewpointSelectorBase">
+    <description>Selects the viewpoints probabilistically by their reward. This is repeated a given number of times and
+      the best solution is returned.
+    </description>
+  </class>
+  <class type="three_dimensional_coverage_path_planning::ProbabilisticExpDistSelector"
+         base_class_type="three_dimensional_coverage_path_planning::ViewpointSelectorBase">
+    <description>Selects the viewpoints probabilistically using an exponential distribution (only based on position in a
+      list sorted by reward). This is repeated a given number of times and the best solution is returned.
+    </description>
+  </class>
+</library>

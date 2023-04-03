@@ -1,0 +1,5 @@
+int32 value
+
+int32 SUCCESS=0
+
+int32 GOAL_BLOCKED=1

@@ -1,0 +1,6 @@
+<library path="lib/libthree_dimensional_coverage_path_planning">
+  <class type="three_dimensional_coverage_path_planning::LidarDataRecorder"
+         base_class_type="three_dimensional_coverage_path_planning::DataRecorderBase">
+    <description>Record the data from the lidar.</description>
+  </class>
+</library>

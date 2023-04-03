@@ -1,0 +1,17 @@
+# use tsdf or esdf:
+use_tsdf: true
+
+# params for mesh_to_sdf service call
+fill_inside: true
+floodfill_unoccupied: true
+
+# general sdf params
+truncation_distance: 0.4
+
+#voxel_size: 0.0375
+voxel_size: 0.05 # large model
+
+
+# level for publish sdf slice
+#slice_level: 0.88
+slice_level: 12.4 # large model

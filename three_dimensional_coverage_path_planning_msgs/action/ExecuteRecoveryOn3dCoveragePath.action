@@ -1,0 +1,16 @@
+#goal definition
+
+# waypoint that was currently approached
+three_dimensional_coverage_path_planning_msgs/Waypoint waypoint
+
+# if the waypoint was reached
+bool waypoint_reached
+
+---
+#result definition
+
+
+
+---
+#feedback
+string progress

@@ -1,0 +1,32 @@
+
+### data directory and model paths
+#data_directory:
+
+#complete_mesh_path: office_one_lvl_remeshed_rotated.obj
+#target_mesh_path: office_one_lvl_remeshed_rotated.obj
+#target_mesh_path: office_one_lvl_target_rotated_and_remeshed.obj
+
+#complete_mesh_path: bad_homburg_remeshed.obj
+complete_mesh_path: bad_homburg_smaller_remeshed.obj
+#target_mesh_path:   bad_homburg_smaller_remeshed.obj
+target_mesh_path:   bad_homburg_target_remeshed.obj
+
+
+
+#complete_point_cloud_path: office_building_1_floor.pcd
+#complete_esdf_path: office_building_1_floor.esdf
+#complete_tsdf_path: office_building_1_floor.tsdf
+#complete_octomap_path: office_building_1_floor.bt
+
+#target_point_cloud_path: office_building_1_floor.pcd
+#target_octomap_path: office_building_1_floor.bt
+
+
+### general data for all (or at least some) models
+
+# voxels_size for all models, that do not have one specified in their own namespace,
+# should be smaller than wall thickness
+voxel_size: 0.075
+#voxel_size: 0.1 # large model
+
+model_frame: building

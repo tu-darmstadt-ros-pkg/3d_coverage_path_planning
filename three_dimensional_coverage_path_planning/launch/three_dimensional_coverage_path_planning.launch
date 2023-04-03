@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node name="three_dimensional_coverage_path_planning" pkg="three_dimensional_coverage_path_planning" type="three_dimensional_coverage_path_planning_node" output="screen" respawn="false">
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/general.yaml" />
+
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/model/general.yaml" ns="model" />
+
+    <!-- Note: for mesh_nav_map.yaml this namespace is required as mesh_map creates its own NodeHandle in this namespace -->
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/mesh_nav_map.yaml" ns="mesh_map" />
+
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/data_recording/general.yaml" ns="data_recording"/>
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/data_recording/lidar.yaml" ns="data_recording"/>
+
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/model/mesh.yaml" ns="model/complete/mesh" />
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/model/sdf.yaml" ns="model/complete/sdf" />
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/model/octomap.yaml" ns="model/complete/octomap" />
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/model/point_cloud.yaml" ns="model/complete/point_cloud" />
+
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/model/mesh.yaml" ns="model/target/mesh" />
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/model/target_point_cloud.yaml" ns="model/target/point_cloud" />
+
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/viewpoint_computation/general.yaml" ns="viewpoint_computation" />
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/viewpoint_computation/mesh_navigation_candidate_generator.yaml" ns="viewpoint_computation/candidate_generation" />
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/viewpoint_computation/octomap_checker.yaml" ns="viewpoint_computation/visibility_checker" />
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/viewpoint_computation/sensor_checker.yaml" ns="viewpoint_computation/visibility_checker" />
+
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/waypoint_order_computation/general.yaml" ns="waypoint_order_computation" />
+
+    <!-- Note: for mesh_nav_planner no namespace is required as the mesh_nav planners create their own NodeHandle with namespace '"~/" + name' -->
+    <rosparam file="$(find three_dimensional_coverage_path_planning)/config/waypoint_order_computation/mesh_nav_planner.yaml"/>
+  </node>
+
+  <!-- launch the packages that provide the mesh conversion services -->
+  <include file="$(find mesh_conversions)/launch/convert_mesh.launch"/>
+
+</launch>

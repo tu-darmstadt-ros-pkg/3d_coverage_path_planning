@@ -1,0 +1,12 @@
+#goal definition
+
+three_dimensional_coverage_path_planning_msgs/Waypoint waypoint
+
+---
+#result definition
+
+
+
+---
+#feedback
+string progress

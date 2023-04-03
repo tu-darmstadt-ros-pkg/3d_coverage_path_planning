@@ -1,0 +1,11 @@
+#goal definition
+bool load_models
+
+---
+#result definition
+three_dimensional_coverage_path_planning_msgs/Path path
+three_dimensional_coverage_path_planning_msgs/Path path_without_viewpoint_information # only waypoint pose, viewpoint and the path are stored, e.g. if no recovery is used in execution, the other data are not required and only increase message size to load and handle extremely.
+
+---
+#feedback
+string progress

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>three_dimensional_coverage_path_planning</name>
+  <version>0.0.0</version>
+  <description>The three_dimensional_coverage_path_planning package</description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <!-- Example:  -->
+  <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
+  <maintainer email="katrin.becker.17@stud.tu-darmstadt.de">Katrin Becker</maintainer>
+
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>TODO</license>
+
+
+  <!-- Url tags are optional, but multiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <!-- Example: -->
+  <!-- <url type="website">http://wiki.ros.org/3d_coverage_path_planning</url> -->
+
+
+  <!-- Author tags are optional, multiple are allowed, one per tag -->
+  <!-- Authors do not have to be maintainers, but could be -->
+  <!-- Example: -->
+  <!-- <author email="jane.doe@example.com">Jane Doe</author> -->
+  <author email="katrin.becker.17@stud.tu-darmstadt.de">Katrin Becker</author>
+
+
+  <!-- The *depend tags are used to specify dependencies -->
+  <!-- Dependencies can be catkin packages or system dependencies -->
+  <!-- Examples: -->
+  <!-- Use depend as a shortcut for packages that are both build and exec dependencies -->
+  <!--   <depend>roscpp</depend> -->
+  <!--   Note that this is equivalent to the following: -->
+  <!--   <build_depend>roscpp</build_depend> -->
+  <!--   <exec_depend>roscpp</exec_depend> -->
+  <!-- Use build_depend for packages you need at compile time: -->
+  <!--   <build_depend>message_generation</build_depend> -->
+  <!-- Use build_export_depend for packages you need in order to build against this package: -->
+  <!--   <build_export_depend>message_generation</build_export_depend> -->
+  <!-- Use buildtool_depend for build tool packages: -->
+  <!--   <buildtool_depend>catkin</buildtool_depend> -->
+  <!-- Use exec_depend for packages you need at runtime: -->
+  <!--   <exec_depend>message_runtime</exec_depend> -->
+  <!-- Use test_depend for packages you need only for testing: -->
+  <!--   <test_depend>gtest</test_depend> -->
+  <!-- Use doc_depend for packages you need only for building documentation: -->
+  <!--   <doc_depend>doxygen</doc_depend> -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>actionlib</depend>
+  <depend>pluginlib</depend>
+  <depend>roscpp</depend>
+  <depend>roslib</depend>
+  <depend>rosbag</depend>
+
+  <depend>sensor_msgs</depend>
+
+  <depend>octomap_ros</depend>
+  <depend>pcl_ros</depend>
+  <depend>voxblox_ros</depend>
+
+  <depend>mesh_map</depend>
+  <depend>mbf_mesh_core</depend>
+
+  <depend>mesh_conversions</depend>
+  <depend>mesh_to_sampled_point_cloud</depend>
+  <depend>mesh_to_sdf</depend>
+
+  <depend>filters</depend>
+  <depend>robot_body_filter</depend>
+
+  <depend>grid_map_planner_lib</depend>
+  <depend>grid_map_proc</depend>
+
+  <depend>hector_waypoint_order</depend>
+
+  <depend>three_dimensional_coverage_path_planning_msgs</depend>
+
+  <!--<exec_depend>octomap-rviz-plugins</exec_depend> -->
+
+  <test_depend>rostest</test_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <three_dimensional_coverage_path_planning plugin="${prefix}/candidate_generator_plugins.xml" />
+    <three_dimensional_coverage_path_planning plugin="${prefix}/data_recorder_plugins.xml" />
+    <three_dimensional_coverage_path_planning plugin="${prefix}/visibility_checker_plugins.xml" />
+    <three_dimensional_coverage_path_planning plugin="${prefix}/viewpoint_selector_plugins.xml" />
+    <three_dimensional_coverage_path_planning plugin="${prefix}/path_planner_plugins.xml" />
+  </export>
+
+</package>

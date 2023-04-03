@@ -1,0 +1,3 @@
+Header header
+
+three_dimensional_coverage_path_planning_msgs/Waypoint[] waypoints

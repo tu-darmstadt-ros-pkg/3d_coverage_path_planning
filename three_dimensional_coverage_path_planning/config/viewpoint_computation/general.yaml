@@ -1,0 +1,59 @@
+### Plugins
+
+candidate_generator_plugin: three_dimensional_coverage_path_planning::MeshNavigationCandidateGenerator
+
+# plugins for visibility checks in correct order (!)
+# Hint: often is the octomap check last, because here the ray casting is exact but also most expensive
+visibility_checker_plugins:
+  - three_dimensional_coverage_path_planning::SensorChecker
+  - three_dimensional_coverage_path_planning::SelfFilterChecker
+  - three_dimensional_coverage_path_planning::SdfChecker
+  - three_dimensional_coverage_path_planning::OctomapChecker
+
+viewpoint_selector_plugin: three_dimensional_coverage_path_planning::GreedySelector
+#viewpoint_selector_plugin: three_dimensional_coverage_path_planning::GreedyWithoutRedundanciesSelector
+#viewpoint_selector_plugin: three_dimensional_coverage_path_planning::ProbabilisticSelector
+#viewpoint_selector_plugin: three_dimensional_coverage_path_planning::ProbabilisticExpDistSelector
+
+# Minimal reward, a candidate viewpoint must have.
+# This parameter allows to trade off between the number of covered targets and the number of sights.
+# (smaller min_reward: more covered target points, but also more viewpoints)
+min_reward: 100
+
+# ONLY USED IN GreedyWithoutRedundanciesSelector!
+# Maximum number of already covered target points that are allowed to be lost when removing redundant selected viewpoints
+# (= be uncovered after remove of redundancy, but the lost target points might be covered later by other selected viewpoints)
+max_num_lost_covered_targets: 99
+
+# Number of repetitions of the selection process for the probabilistic selectors
+num_selections_repetitions: 100
+
+
+### Visualizations / Statistics
+# visibility checks can only be published if OpenMP is not used (CMake option)
+publish_visibility_checks: true
+visibility_lines: false # false: lines, true: points
+
+print_stats: false # stats for each candidate viewpoint
+
+
+publish_all_candidates: true
+publish_selected_candidates: true
+publish_uncovered_target_points: true
+
+
+# cover 360° with candidate orientations "candidate_orientation_factor" times,
+#  e.g. if candidate_orientation_factor is 2.0 and the horizontal field of view is 180°, 4 orientations are generated per candidate position
+# If set to 0, no orientation sampling is used but always identity as orientation
+candidate_orientation_factor: 0.0
+
+### Sensor specifics
+
+# Field of view, in degrees
+
+# Note: the VLP-16 Lidar has a vertical FOV of -15 to 15 degree. But as it is mounted at an angle of 45 degrees, the vertical FOV is now -60 to 60 degrees.
+field_of_view:
+  horizontal_min: -180
+  horizontal_max: 180
+  vertical_min: -60
+  vertical_max: 60

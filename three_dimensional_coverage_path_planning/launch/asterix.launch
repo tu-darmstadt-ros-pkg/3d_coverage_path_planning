@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <rosparam
+      file="$(find three_dimensional_coverage_path_planning)/config/viewpoint_computation/asterix_vlp16_robot_body_filter_config.yaml"
+      ns="three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker"/>
+
+
+  <include file="$(find three_dimensional_coverage_path_planning)/launch/joint_and_robot_state_publisher.launch">
+    <!--Display default robot model-->
+    <arg name="robot_description" value="$(find xacro)/xacro $(find asterix_description)/urdf/asterix_ugv.urdf.xacro"/>
+    <arg name="zeros" value="{
+        arm_joint_0: 1.15,
+        arm_joint_1: -1.54,
+        arm_joint_2: 1.47,
+        arm_joint_3: -1.51,
+        arm_joint_4: -1.66,
+        arm_joint_5: 0.0,
+        flipper_front_joint: -0.5,
+        flipper_back_joint: -0.5
+        }"/>
+
+    <arg name="rviz_config_file" value="$(find asterix_description)/rviz/xacrodisplay.rviz"/>
+    <arg name="gui" value="false"/>
+  </include>
+
+</launch>

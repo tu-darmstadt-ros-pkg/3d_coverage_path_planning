@@ -1,0 +1,6 @@
+num_sample_points: 5000000
+
+voxel_filter_leaf_size: 0.01
+
+write_normals: false
+write_colors: false

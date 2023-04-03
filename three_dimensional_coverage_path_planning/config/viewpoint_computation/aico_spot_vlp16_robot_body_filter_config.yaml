@@ -1,0 +1,36 @@
+## in most parts taken from aico_spot_onboard_launch / lidar config, slightly adapted (use fixed frame and set frames/sensor and output)
+
+
+cloud_filter_chain:
+  - name: robot_body_filter_containment
+    type: robot_body_filter/RobotBodyFilterPointCloud2
+    params:
+      transforms/timeout/unreachable: 1.0
+      transforms/timeout/reachable: 1.0
+      transforms/require_all_reachable: false
+      debug/pcl/clip: true
+      debug/pcl/shadow: true
+      debug/pcl/inside: true
+      sensor/point_by_point: false # true would be better, but we lack per point viewpoint coordinates
+      sensor/min_distance: 0.15
+      sensor/max_distance: 0
+      frames/sensor: lidar_laser_frame  # here not filled from header
+      frames/filtering: lidar_laser_frame
+      frames/output: lidar_laser_frame # same as filter frame
+      frames/fixed: lidar_laser_frame # not used if point_by_point is false
+      body_model/inflation/scale: 1.0
+      body_model/inflation/padding: 0.0
+      body_model/inflation/contains_test/scale: 1.0
+      body_model/inflation/contains_test/padding: 0.03
+      body_model/inflation/shadow_test/scale: 1.0
+      body_model/inflation/shadow_test/padding: 0.01
+      body_model/robot_description_param: /robot_description
+      #body_model/inflation/per_link/padding: {}
+      filter/do_clipping: true
+      filter/do_contains_test: true
+      filter/do_shadow_test: true
+      filter/max_shadow_distance: 3
+      only_links:
+        - body
+        - front_left_upper_leg
+        - front_right_upper_leg

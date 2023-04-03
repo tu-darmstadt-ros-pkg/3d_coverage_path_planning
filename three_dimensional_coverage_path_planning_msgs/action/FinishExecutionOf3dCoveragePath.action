@@ -1,0 +1,11 @@
+#goal definition
+
+---
+#result definition
+
+# directory that contains the recorded data
+string recorded_data_directory
+
+---
+#feedback
+string progress

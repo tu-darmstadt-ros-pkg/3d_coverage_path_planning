@@ -1,0 +1,6 @@
+<library path="lib/libthree_dimensional_coverage_path_planning">
+  <class type="three_dimensional_coverage_path_planning::MeshNavigationPathPlanner"
+         base_class_type="hector_waypoint_order::PathPlannerBase">
+    <description>Use the mesh_navigation package for path planning.</description>
+  </class>
+</library>

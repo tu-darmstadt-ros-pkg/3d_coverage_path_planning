@@ -1,0 +1,29 @@
+# If the goal is obstructed, how many meters the planner can relax the constraint in x and y before failing (see MeshPlanner)
+tolerance: 0.2
+
+planner_name: 'dijkstra_mesh_planner'
+planner_type: 'dijkstra_mesh_planner/DijkstraMeshPlanner'
+
+#planner_name: 'cvp_mesh_planner'
+#planner_type: 'cvp_mesh_planner/CVPMeshPlanner'
+
+
+# for the planner config the same name needs to be used as in planners list
+dijkstra_mesh_planner:
+  # dynamic reconfigure params:
+  cost_limit: 0.5 # Defines the vertex cost limit with which it can be accessed.
+  # other params
+  publish_vector_field: false
+  publish_face_vectors: false
+  goal_dist_offset: 0.3 # Offset that is added to goal_dist value in Djiskstra planner as current distance to goal. (default = 0.3)
+
+cvp_mesh_planner:
+  # dynamic reconfigure params:
+  cost_limit: 0.5 # Defines the vertex cost limit with which it can be accessed.
+  step_width: 0.4 # The vector field back tracking step width.
+  # other params
+  publish_vector_field: false
+  publish_face_vectors: false
+  goal_dist_offset: 0.3 # Offset that is added to goal_dist value in Djiskstra planner as current distance to goal. (default = 0.3)
+
+

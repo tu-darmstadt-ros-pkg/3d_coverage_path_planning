@@ -1,0 +1,13 @@
+#goal definition
+
+# if empty waypoint list, no path is loaded and hence only used if node was not restarted since planning,
+#   otherwise not path information will be used for e.g. feedback loop.
+three_dimensional_coverage_path_planning_msgs/Path path
+
+---
+#result definition
+
+
+---
+#feedback
+string progress

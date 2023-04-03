@@ -1,0 +1,42 @@
+
+# Note: no rotation / scaling / translation possible -->
+#   need to be done in Blender before converting to h5 file
+
+# absolute or relative to data directory
+#mesh_file: office_one_lvl_remeshed_rotated.h5
+mesh_file: bad_homburg_smaller_remeshed.h5
+
+
+# mesh part in h5 file
+mesh_part: mesh
+
+layers:
+  - name: 'height_diff'
+    type: 'mesh_layers/HeightDiffLayer'
+  - name: 'inflation'
+    type: 'mesh_layers/InflationLayer'
+
+
+# In the height diff layer, the local height difference using the radius is computed.
+# All vertices with height diff greater than the given threshold are marked as lethal vertices.
+height_diff:
+  factor: 1.0
+  threshold: 0.2 # On vertical walls, the maximum of hight_diff value is 2*radius.
+  radius: 0.2 # All vertices in a sphere with this radius (euclidean distance!) around the current vertex are iterated and the min and max height stored. The height_diff of the current vertex is then max - min.
+
+
+# The inflation layer can only work in combination with one of the other layers, as here no lethals are computed,
+# but required for inflation computation.
+# For the inflation layer, the distance to lethal vertices is used (negative "behind" the lethals, i.e. in obstacles, positive outside).
+# According to this distance, the inflation layer value is set:
+#   *                     distance < 0                : lethal_value
+#   *                0 <= distance < inscribed_radius : inscribed_value
+#   * inscribed_radius <= distance < inflation_radius : factor * inscribed_value (with factor in [0,1] depending on distance to inscribed_radius)
+#   * inflation_radius <= distance                    : 0
+inflation:
+  factor: 1.0
+  inflation_radius: 0.35 # inflation_radius >= inscribed_radius required! See explanation above. Use equal inflation and inscribed radius here to get smooth borders.
+  inscribed_radius: 0.35
+  lethal_value: 2.0
+  inscribed_value: 1.0
+  repulsive_field: false

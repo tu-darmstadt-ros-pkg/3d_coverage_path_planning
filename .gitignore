@@ -1,0 +1,9 @@
+one_room.obj
+one_room.obj.mtl
+
+*.ply
+*.pcd
+*.esdf
+*.tsdf
+*.bt
+*.json

@@ -1,0 +1,4 @@
+
+#recorded_data_directory: "recorded_data"
+
+data_recorder_plugin: three_dimensional_coverage_path_planning::LidarDataRecorder

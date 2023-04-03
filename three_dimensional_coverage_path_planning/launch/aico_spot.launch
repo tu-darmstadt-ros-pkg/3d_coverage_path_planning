@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <rosparam
+      file="$(find three_dimensional_coverage_path_planning)/config/viewpoint_computation/aico_spot_vlp16_robot_body_filter_config.yaml"
+      ns="three_dimensional_coverage_path_planning/viewpoint_computation/visibility_checker"/>
+
+
+  <include file="$(find three_dimensional_coverage_path_planning)/launch/joint_and_robot_state_publisher.launch">
+    <!--Display default robot model-->
+    <arg name="robot_description" value="$(find xacro)/xacro --inorder '$(find aico_spot_description)/urdf/spot.urdf.xacro'"/>
+    <arg name="zeros" value="{
+        front_left_hip_x: -0.07,
+        front_left_hip_y: 0.9,
+        front_left_knee: -1.67,
+        front_right_hip_x: 0.07,
+        front_right_hip_y: 0.9,
+        front_right_knee: -1.7,
+        rear_left_hip_x: -0.07,
+        rear_left_hip_y: 0.9,
+        rear_left_knee: -1.67,
+        rear_right_hip_x: 0.07,
+        rear_right_hip_y: 0.9,
+        rear_right_knee: -1.67
+        }"/>
+
+    <arg name="rviz_config_file" value="$(find aico_spot_description)/rviz/xacrodisplay.rviz"/>
+    <arg name="gui" value="false"/>
+  </include>
+
+</launch>

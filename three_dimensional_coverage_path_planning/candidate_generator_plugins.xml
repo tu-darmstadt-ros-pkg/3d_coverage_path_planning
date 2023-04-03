@@ -1,0 +1,6 @@
+<library path="lib/libthree_dimensional_coverage_path_planning">
+  <class type="three_dimensional_coverage_path_planning::MeshNavigationCandidateGenerator"
+         base_class_type="three_dimensional_coverage_path_planning::CandidateGeneratorBase">
+    <description>Generate candidates using the mesh_navigation maps.</description>
+  </class>
+</library>

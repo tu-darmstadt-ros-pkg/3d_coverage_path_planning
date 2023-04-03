@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<launch>
+
+<!-- static tranform publisher is only required in simulation to describe the transformation between world and model frame -->
+<!-- static_transform_publisher args: x y z  qx qy qz qw     frame_id child_frame_id period_in_ms
+     OR:                              x y z  yaw pitch roll  frame_id child_frame_id period_in_ms-->
+  <node name="model_frame_publisher" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 world building 100" />
+
+  <!--<include file="$(find three_dimensional_coverage_path_planning)/launch/asterix.launch"/> -->
+
+
+<!-- three_dimensional_coverage_path_planning node -->
+  <include file="$(find three_dimensional_coverage_path_planning)/launch/three_dimensional_coverage_path_planning.launch"/>
+
+  <arg name="rviz" value="true"/>
+  <node if="$(arg rviz)" name="rviz_3d_coverage_path_planning" pkg="rviz" type="rviz" args="-d $(find three_dimensional_coverage_path_planning)/rviz/precomputation.rviz" respawn="true" />
+
+
+</launch>

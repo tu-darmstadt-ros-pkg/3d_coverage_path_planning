@@ -1,0 +1,13 @@
+#goal definition
+
+nav_msgs/Path path_to_waypoint
+move_base_lite_msgs/FollowPathOptions follow_path_options
+
+---
+#result definition
+MoveResultCode result
+
+
+---
+#feedback
+string progress

@@ -1,0 +1,18 @@
+<library path="lib/libthree_dimensional_coverage_path_planning">
+  <class type="three_dimensional_coverage_path_planning::SdfChecker"
+         base_class_type="three_dimensional_coverage_path_planning::VisibilityCheckerBase">
+    <description>Checks visibility using a sdf.</description>
+  </class>
+  <class type="three_dimensional_coverage_path_planning::OctomapChecker"
+         base_class_type="three_dimensional_coverage_path_planning::VisibilityCheckerBase">
+    <description>Checks visibility using an octomap.</description>
+  </class>
+  <class type="three_dimensional_coverage_path_planning::SensorChecker"
+         base_class_type="three_dimensional_coverage_path_planning::VisibilityCheckerBase">
+    <description>Checks visibility using the sensor specifications.</description>
+  </class>
+  <class type="three_dimensional_coverage_path_planning::SelfFilterChecker"
+         base_class_type="three_dimensional_coverage_path_planning::VisibilityCheckerBase">
+    <description>Checks visibility using the robot's self filter / robot body filter.</description>
+  </class>
+</library>
