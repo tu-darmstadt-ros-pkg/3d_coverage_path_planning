@@ -1,6 +1,24 @@
 # 3d_coverage_path_planning
 
-Global path planning that generates an optimal path to cover a prior 3d mesh model with a sensor payload.
+Global path planning that generates an optimal path for an autonomous mobile ground robot to cover a prior 3D mesh model with a sensor payload.
+
+<img src="docs/preview.png" width="700">
+
+Please cite our paper if you use this software as part of your scientific publication:
+
+```
+@INPROCEEDINGS{10018726,
+  author={Becker, Katrin and Oehler, Martin and Von Stryk, Oskar},
+  booktitle={2022 IEEE International Symposium on Safety, Security, and Rescue Robotics (SSRR)}, 
+  title={3D Coverage Path Planning for Efficient Construction Progress Monitoring}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={174-179},
+  doi={10.1109/SSRR56537.2022.10018726}}
+```
+* [IEEE Xplore](https://ieeexplore.ieee.org/document/10018726)
+* [arXiv](https://arxiv.org/abs/2302.00968)
 
 
 <br><br>
