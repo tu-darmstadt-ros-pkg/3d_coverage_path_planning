@@ -60,11 +60,12 @@ The preparations are not always necessary(e.g. if nothing changed in configurati
 Here a precomputed path is loaded and executed. During the execution, the path is updated if obstacles occure. Each time a waypoint is reached, the data recoding is started, e.g. the point cloud is recorded and accumulated to a model.
 
 #### Run execution of path  <a name="execution"></a>
-1. Load behavior "three_dimensional_coverage_path_planning_execution" in FlexBE.
-2. Launch file:
+1. Start flexbe_onboard `roslaunch flexbe_onboard behavior_onboard.launch` (when no simulation / robot is running)
+2. Load behavior "three_dimensional_coverage_path_planning_execution" in FlexBE.
+3. Launch file:
     * "sim_three_dimensional_coverage_path_planning.launch" (with rviz)
     * "execute_three_dimensional_coverage_path_planning.launch" (without rviz)
-3. Start execution in FlexBE.
+4. Start execution in FlexBE.
 
 
 
