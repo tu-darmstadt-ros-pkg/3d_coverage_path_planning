@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="three_dimesional_coverage_path_planning_waypoint">
+
+	<executable package_path="three_dimensional_coverage_path_planning_behaviors.three_dimesional_coverage_path_planning_waypoint_sm" class="three_dimesional_coverage_path_planning_waypointSM" />
+	<tagstring></tagstring>
+	<author>Katrin Becker</author>
+	<date>Wed Mar 09 2022</date>
+	<description>
+		This behavior handles the execution of one waypoint.
+	</description>
+
+
+	<!-- Contained Behaviors -->
+
+	<!-- Available Parameters -->
+	<params>
+
+		<param type="numeric" name="speed" default="0.5" label="speed" hint="Sets the speed">
+			<min value="0" />
+			<max value="1" />
+		</param>
+
+		<param type="boolean" name="use_planning" default="True" label="use_planning" hint="Sets the use_planning" />
+
+	</params>
+
+
+</behavior>

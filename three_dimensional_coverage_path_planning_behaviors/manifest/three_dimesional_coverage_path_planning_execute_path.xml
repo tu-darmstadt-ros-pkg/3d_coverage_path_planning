@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="three_dimesional_coverage_path_planning_execute_path">
+
+	<executable package_path="three_dimensional_coverage_path_planning_behaviors.three_dimesional_coverage_path_planning_execute_path_sm" class="three_dimesional_coverage_path_planning_execute_pathSM" />
+	<tagstring></tagstring>
+	<author>Katrin Becker</author>
+	<date>Mon Mar 07 2022</date>
+	<description>
+		This behavior handles the execution of a precomputed path.
+	</description>
+
+
+	<!-- Contained Behaviors -->
+	<contains name="three_dimesional_coverage_path_planning_waypoint" />
+
+	<!-- Available Parameters -->
+	<params>
+
+		<param type="boolean" name="use_recovery" default="False" label="use_recovery" hint="Whether to use recovery or not." />
+
+		<param type="numeric" name="speed" default="0.0" label="speed" hint="Sets the speed. If left at 0.0, controller default is used.">
+			<min value="0" />
+			<max value="5.0" />
+		</param>
+
+		<param type="boolean" name="use_planning" default="False" label="use_planning" hint="Sets the use_planning" />
+
+	</params>
+
+
+</behavior>

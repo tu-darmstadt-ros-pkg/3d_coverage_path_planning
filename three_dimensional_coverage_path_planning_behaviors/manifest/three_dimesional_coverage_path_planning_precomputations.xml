@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="three_dimesional_coverage_path_planning_precomputations">
+
+	<executable package_path="three_dimensional_coverage_path_planning_behaviors.three_dimesional_coverage_path_planning_precomputations_sm" class="three_dimesional_coverage_path_planning_precomputationsSM" />
+	<tagstring></tagstring>
+	<author>Katrin Becker</author>
+	<date>Tue Feb 15 2022</date>
+	<description>
+		This behavior handles the precomputations for the 3D coverage path planning.
+	</description>
+
+
+	<!-- Contained Behaviors -->
+
+	<!-- Available Parameters -->
+	<params>
+
+		<param type="boolean" name="for_mission_execution_manager" default="False" label="for_mission_execution_manager_usage" hint="If the data are stored for the usage with the mission execution manager or general usage." />
+
+		<param type="boolean" name="load_models" default="False" label="load_models" hint="If the models shoudl be loaded or computed from mesh." />
+
+	</params>
+
+
+</behavior>
