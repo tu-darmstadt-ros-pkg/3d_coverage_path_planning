@@ -23,6 +23,31 @@ Please cite our paper if you use this software as part of your scientific public
 
 <br><br>
 
+## Installation
+
+Go into the source directory of your workspace and check out 3d_coverage_path_planning
+```
+cd src/
+git clone https://github.com/tu-darmstadt-ros-pkg/3d_coverage_path_planning.git
+```
+
+Install dependencies via rosdep and wstool (.rosinstall)
+```
+cd 3d_coverage_path_planning
+wstool init ../.. # not required if already initialized
+wstool merge 3d_coverage_path_planning.rosinstall
+wstool update
+rosdep install --from-paths . --ignore-src -r -y
+```
+Build
+```
+catkin build three_dimensional_coverage_path_planning
+```
+and source the workspace
+```
+source ../../devel/setup.bash
+```
+
 ## Data directories <a name="data_directories"></a>
 
 #### Models and path
