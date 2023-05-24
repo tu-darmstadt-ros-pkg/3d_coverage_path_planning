@@ -1,2 +1,3 @@
 - git: {local-name: common_behavior, uri: 'git@git.sim.informatik.tu-darmstadt.de:hector/common_behavior.git', version: three_dim_coverage_path_planning}
+- git: {local-name: src/hector_waypoint_order, uri: 'https://github.com/tu-darmstadt-ros-pkg/hector_waypoint_order.git', version: main}
 - git: {local-name: mesh_navigation, uri: 'git@github.com:tu-darmstadt-ros-pkg/mesh_navigation.git', version: fix/mesh_map}
